@@ -10,27 +10,36 @@
       sizes="32x32"
       href="./assets/favicon-32x32.png"
     />
-
+    <link rel="stylesheet" href="styles.css" />
     <title>Frontend Mentor | Suite landing page</title>
   </head>
   <body>
-    <header>
+    <header class="header container">
       <img src="/assets/logo.svg" alt="Suite logo" />
       <button class="btn btn--secondary">Request Beta Access</button>
     </header>
     <main>
-      <section class="container hero">
-        <div class="hero-grid">
-          <div class="hero__cta-section">
-            <h1 class="hero__title">
-              A <strong>super solution</strong> for your
-              <strong>business.</strong>
-            </h1>
-            <p class="hero__title">
-              Our marketing and sales automations help you scale your outreach
-              to get more leads for your company.
-            </p>
-            <button class="btn btn--secondary">Request Beta Access</button>
+      <section class="hero container">
+        <div class="hero-grid-1">
+          <div class="hero__cta-section hero-grid-2">
+            <div class="grid-content">
+              <h1 class="hero__title main-heading">
+                A <strong class="bold-text">super solution</strong> for your
+                <strong class="bold-text">business.</strong>
+              </h1>
+              <p class="hero__description">
+                Our marketing and sales automations help you scale your outreach
+                to get more leads for your company.
+              </p>
+              <button class="btn btn--primary">Request Beta Access</button>
+            </div>
+            <div class="grid-image">
+              <img
+                src="/assets/image-hero-portrait@2x.png"
+                alt=""
+                class="hero__img"
+              />
+            </div>
           </div>
           <div class="hero__reach-section">
             <p class="reach-information">
@@ -45,9 +54,13 @@
           </div>
         </div>
       </section>
-      <section class="reviews">
+      <section class="reviews container">
         <div class="grid-2cols">
-          <img src="/assets/image-jeremy-large@2x.png" alt="" />
+          <img
+            src="/assets/image-jeremy-large@2x.png"
+            alt=""
+            class="reviews__img"
+          />
           <div class="quote-section">
             <h2 class="reviews__title">
               Leads It just <strong>works.</strong>
@@ -64,9 +77,14 @@
       </section>
     </main>
     <footer>
-      <div class="grid-3cols">
+      <div class="container grid-3cols">
         <img src="/assets/logo.svg" alt="Suite logo" />
         <p class="copyright">&copy Copyright - Suite</p>
+        <div class="social-icons">
+          <a href="#"><img src="/assets/icon-facebook.svg" alt="" /></a>
+          <a href="#"><img src="/assets/icon-twitter.svg" alt="" /></a>
+          <a href="#"><img src="/assets/icon-instagram.svg" alt="" /></a>
+        </div>
       </div>
     </footer>
   </body>
