@@ -1,43 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Suite landing page</title>
-</head>
-<body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
 
-  Request Beta Access
-
-  A super solution for your business.
-
-  Our marketing and sales automations help you scale your outreach to 
-  get more leads for your company. 
-
-  Request Beta Access
-
-  2K+
-  Companies
-
-  8
-  Languages
-
-  1.2M
-  Leads
-
-  It just works.
-
-  “I really like how it is an all-in-one solution that handle many of 
-  the tasks that you would normally need separate tools to do the same 
-  job. This thing is a miracle worker.”
-
-  Jeremy Robinson
-  CMO, Fylo
-
-  Copyright - Suite
-
-</body>
+    <title>Frontend Mentor | Suite landing page</title>
+  </head>
+  <body>
+    <header>
+      <img src="/assets/logo.svg" alt="Suite logo" />
+      <button class="btn btn--secondary">Request Beta Access</button>
+    </header>
+    <main>
+      <section class="container hero">
+        <div class="hero-grid">
+          <div class="hero__cta-section">
+            <h1 class="hero__title">
+              A <strong>super solution</strong> for your
+              <strong>business.</strong>
+            </h1>
+            <p class="hero__title">
+              Our marketing and sales automations help you scale your outreach
+              to get more leads for your company.
+            </p>
+            <button class="btn btn--secondary">Request Beta Access</button>
+          </div>
+          <div class="hero__reach-section">
+            <p class="reach-information">
+              2K+<span class="reach-title">Companies</span>
+            </p>
+            <p class="reach-information">
+              8<span class="reach-title">Languages</span>
+            </p>
+            <p class="reach-information">
+              1.2M<span class="reach-title">Leads</span>
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="reviews">
+        <div class="grid-2cols">
+          <img src="/assets/image-jeremy-large@2x.png" alt="" />
+          <div class="quote-section">
+            <h2 class="reviews__title">
+              Leads It just <strong>works.</strong>
+            </h2>
+            <q class="reviews__quote"
+              >I really like how it is an all-in-one solution that handle many
+              of the tasks that you would normally need separate tools to do the
+              same job. This thing is a miracle worker.</q
+            >
+            <p class="reviews__user-name">Jeremy Robinson</p>
+            <p class="reviews__user-title">CMO, Fylo</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="grid-3cols">
+        <img src="/assets/logo.svg" alt="Suite logo" />
+        <p class="copyright">&copy Copyright - Suite</p>
+      </div>
+    </footer>
+  </body>
 </html>
