@@ -74,6 +74,8 @@ h6 {
   max-width: 74rem;
   padding-inline: 2rem;
   margin-inline: auto;
+
+  outline: red solid 2px;
 }
 
 /* headings */
@@ -231,12 +233,17 @@ body {
 
 /* reviews */
 .reviews-container {
-  background: var(--dark-blue);
+  background: gainsboro;
   color: var(--white);
   border-radius: 0.9375rem;
 
   margin-top: clamp(12.4375rem, 27.4485rem + -21.6374vi, 17.0625rem);
 
+  position: relative;
+  outline: orange solid 2px;
+}
+
+.reviews {
   position: relative;
 }
 
