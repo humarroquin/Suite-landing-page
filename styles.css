@@ -230,7 +230,7 @@ body {
 }
 
 /* reviews */
-.reviews {
+.reviews-container {
   background: var(--dark-blue);
   color: var(--white);
   border-radius: 0.9375rem;
@@ -238,6 +238,17 @@ body {
   margin-top: clamp(12.4375rem, 27.4485rem + -21.6374vi, 17.0625rem);
 
   position: relative;
+}
+
+.reviews::after {
+  content: '';
+  background-color: var(--light-beige);
+  height: 50%;
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
 }
 
 .reviews__img {
