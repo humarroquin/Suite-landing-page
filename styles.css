@@ -71,11 +71,11 @@ h6 {
 
 /* containers */
 .container {
-  max-width: 74rem;
-  padding-inline: 2rem;
-  margin-inline: auto;
+  --max-width: 1110px;
+  --padding: 1rem;
 
-  outline: red solid 2px;
+  width: min(var(--max-width), 100% - (var(--padding) * 2));
+  margin-inline: auto;
 }
 
 /* headings */
@@ -85,6 +85,14 @@ h6 {
   font-size: var(--fluid-h1);
   line-height: clamp(2.75rem, 1.6658rem + 4.6259vi, 4.875rem);
   letter-spacing: -1px;
+}
+
+.secondary-heading {
+  font-family: var(--ff-headings);
+  font-weight: var(--fw-regular);
+  font-size: var(--fluid-h2);
+  line-height: clamp(3rem, 2.7449rem + 1.0884vi, 3.5rem);
+  letter-spacing: -0.5px;
 }
 
 /* text */
@@ -158,8 +166,19 @@ body {
 }
 
 .hero__title {
-  max-width: 39.5rem;
+  max-width: 16ch;
   margin-bottom: clamp(2rem, 1.7449rem + 1.0884vi, 2.5rem);
+  position: relative;
+}
+
+.hero__title::after {
+  content: '';
+  position: absolute;
+  background: url(/assets/pattern-curved-line-1.svg) no-repeat;
+  height: 39px;
+  width: 289px;
+  top: -50px;
+  right: 50px;
 }
 
 .hero__description {
@@ -176,7 +195,6 @@ body {
 @media screen and (max-width: 50em) {
   .hero-grid-1 {
     grid-template-columns: 1fr;
-    gap: clamp(3.5rem, 1.7353rem + 7.5294vi, 5.5rem);
   }
 }
 
@@ -186,11 +204,11 @@ body {
   align-items: center;
 }
 
-.grid-image {
+.hero-grid-image {
   grid-column: 3 / 4;
 }
 
-.grid-content {
+.hero-grid-content {
   padding-top: clamp(0rem, -3.2526rem + 13.8776vi, 6.375rem);
   padding-bottom: clamp(3.5rem, 2.352rem + 4.898vi, 5.75rem);
   max-width: 39.6875rem;
@@ -199,9 +217,27 @@ body {
   z-index: 1;
 }
 
-.grid-content,
-.grid-image {
+.hero-grid-content,
+.hero-grid-image {
   grid-row: 1 / -1;
+}
+
+/* desktop-mobile image */
+.hero__img-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 30em) {
+  .hero__img-mobile {
+    display: block;
+    margin-bottom: clamp(3.5rem, 1.7353rem + 7.5294vi, 5.5rem);
+  }
+  .hero__img-desktop {
+    display: none;
+  }
+  .hero__description {
+    max-width: 100%;
+  }
 }
 
 /* reach */
