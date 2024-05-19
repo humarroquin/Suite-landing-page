@@ -282,13 +282,24 @@ body {
   position: relative;
 }
 
+.reviews-container::after {
+  content: '';
+  position: absolute;
+  background: url(/assets/pattern-blur.svg) no-repeat;
+  height: 538px;
+  width: 538px;
+  top: 0;
+  left: 0;
+}
+
 .reviews__img {
-  max-width: 23.4375rem;
+  max-width: 20rem;
   height: auto;
 
   position: absolute;
   left: 112px;
   bottom: 0;
+  z-index: 1;
 }
 
 .quote-section {
@@ -312,8 +323,6 @@ body {
   text-transform: uppercase;
 }
 
-/* !Continue here */
-
 /* footer */
 footer {
   background-color: var(--light-beige);
@@ -327,14 +336,24 @@ footer {
 
 .social-icons {
   display: flex;
+  align-items: center;
   gap: 1.75rem;
   justify-self: end;
+}
+
+.social-icon {
+  transition: all 0.3s ease-in;
+}
+
+.social-icon:hover {
+  fill: var(--light-blue);
 }
 
 /* media queries */
 
 /* mobile view */
 @media screen and (max-width: 30em) {
+  /* hero */
   .hero__img-mobile {
     display: block;
     margin-bottom: clamp(3.5rem, 1.7353rem + 7.5294vi, 5.5rem);
